@@ -17,7 +17,7 @@
     /// <summary>
     /// Interaktionslogik für FensterMinMax.xaml
     /// </summary>
-    public partial class FensterMinMax : Window
+    public partial class FensterMinMax : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
@@ -27,18 +27,18 @@
         /// <summary>
         /// Eine Referenz auf die Firma
         /// </summary>
-        private Firma firma = null;
+        private FirmaSubject firma = null;
 
         /// <summary>
         /// Initialisiert eine neue Instanz der FensterMinMax Klasse
         /// </summary>
         /// <param name="firma">Eine Referenz auf die Firma</param>
-        private FensterMinMax(Firma firma)
+        private FensterMinMax(FirmaSubject firma)
         {
             this.InitializeComponent();
 
             this.firma = firma;
-            this.UpdateWindow();
+            this.Update();
         }
 
         /// <summary>
@@ -46,7 +46,7 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        public static FensterMinMax GetWindow(Firma firma)
+        public static FensterMinMax GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
@@ -57,9 +57,9 @@
         }
 
         /// <summary>
-        /// Aktuallisiert das Fenster
+        /// Aktualisiert das Fenster
         /// </summary>
-        public void UpdateWindow()
+        public void Update()
         {
             lstDetailsBest.Items.Clear();
             lstDetailsWorst.Items.Clear();

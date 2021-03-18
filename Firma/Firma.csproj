@@ -70,6 +70,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Erzeuger.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="Subject.cs" />
     <Page Include="FensterMinMax.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,7 +90,7 @@
     <Compile Include="FensterMinMax.xaml.cs">
       <DependentUpon>FensterMinMax.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Firma.cs" />
+    <Compile Include="FirmaSubject.cs" />
     <Compile Include="FormEingabe.xaml.cs">
       <DependentUpon>FormEingabe.xaml</DependentUpon>
       <SubType>Code</SubType>

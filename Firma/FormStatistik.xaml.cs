@@ -17,28 +17,28 @@
     /// <summary>
     /// Interaktionslogik für FormStatistik.xaml
     /// </summary>
-    public partial class FormStatistik : Window
+    public partial class FormStatistik : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
         /// </summary>
-        static private FormStatistik singleton = null;
+        private static FormStatistik singleton = null;
 
         /// <summary>
         /// Eine Referenz auf die Firma
         /// </summary>
-        private Firma firma = null;
+        private FirmaSubject firma = null;
 
         /// <summary>
         /// Initialisiert eine neue Instanz der FormStatistik Klasse
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
-        private FormStatistik(Firma firma)
+        private FormStatistik(FirmaSubject firma)
         {
             this.InitializeComponent();
 
             this.firma = firma;
-            this.UpdateWindow();
+            this.Update();
         }
 
         /// <summary>
@@ -46,7 +46,7 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        static public FormStatistik GetWindow(Firma firma)
+        public static FormStatistik GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
@@ -59,7 +59,7 @@
         /// <summary>
         /// Aktuallisert das Fenster
         /// </summary>
-        public void UpdateWindow()
+        public void Update()
         {
             float gesamtGehalt = 0.0f;
 

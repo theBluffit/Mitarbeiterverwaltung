@@ -17,28 +17,28 @@
     /// <summary>
     /// Interaktionslogik für FormMitarbeiter.xaml
     /// </summary>
-    public partial class FormMitarbeiter : Window
+    public partial class FormMitarbeiter : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
         /// </summary>
-        static private FormMitarbeiter singleton = null;
+        private static FormMitarbeiter singleton = null;
 
         /// <summary>
         /// Eine Referenz auf die Firma
         /// </summary>
-        private Firma firma = null;
+        private FirmaSubject firma = null;
 
         /// <summary>
         /// Initialisiert eine neue Instanz der FormMitarbeiter Klasse
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
-        private FormMitarbeiter(Firma firma)
+        private FormMitarbeiter(FirmaSubject firma)
         {
             this.InitializeComponent();
 
             this.firma = firma;
-            this.UpdateWindow();
+            this.Update();
         }
 
         /// <summary>
@@ -46,7 +46,7 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        static public FormMitarbeiter GetWindow(Firma firma)
+        public static FormMitarbeiter GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
@@ -59,7 +59,7 @@
         /// <summary>
         /// Aktuallisiert das Fenster
         /// </summary>
-        public void UpdateWindow()
+        public void Update()
         {
             this.lstDetails.Items.Clear();
 

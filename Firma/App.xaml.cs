@@ -16,14 +16,14 @@
         /// <summary>
         /// Die Firma
         /// </summary>
-        private Firma firma = new Firma();
+        private FirmaSubject firma = new FirmaSubject();
 
         /// <summary>
         /// Initialisiert eine neue Instanz der App Klasse
         /// </summary>
         public App()
         {
-            this.firma.ShowWindows();
+            Erzeuger.ErzeugeObserver(this.firma);
         }
     }
 }

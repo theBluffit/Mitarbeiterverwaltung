@@ -18,23 +18,23 @@
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
         /// </summary>
-        static private MainWindow singleton = null;
+        private static MainWindow singleton = null;
 
         /// <summary>
         /// Eine Referenz auf die Firma
         /// </summary>
-        private Firma firma = null;
+        private FirmaSubject firma = null;
 
         /// <summary>
         /// Initialisiert eine neue Instanz der MainWindow Klasse
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
-        private MainWindow(Firma firma)
+        private MainWindow(FirmaSubject firma)
         {
             this.InitializeComponent();
 
@@ -46,7 +46,7 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        static public MainWindow GetWindow(Firma firma)
+        public static MainWindow GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
@@ -54,6 +54,14 @@
             }
 
             return singleton;
+        }
+
+        /// <summary>
+        /// Aktualisiert das Fenster
+        /// </summary>
+        public void Update()
+        {
+            // Nichts geschieht
         }
 
         /// <summary>
@@ -77,7 +85,7 @@
                 }
 
                 this.firma.ListMitarbeiter.Add(newMitarbeiter);
-                this.firma.UpdateWindows();
+                this.firma.Notify();
 
                 MessageBox.Show("Mitarbeiter hinzugefügt", "Erfolg", MessageBoxButton.OK, MessageBoxImage.Information);
             }
