@@ -1,0 +1,13 @@
+﻿<Window x:Class="Vererbung.FormMitarbeiter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vererbung"
+        mc:Ignorable="d"
+        Title="Mitarbeiterliste" Height="427.634" Width="356.263" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <ListBox x:Name="lstDetails" HorizontalAlignment="Left" Height="374" Margin="12,11,0,0" VerticalAlignment="Top" Width="317"/>
+
+    </Grid>
+</Window>
