@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Doxygen dateien ignorieren
+Doxygen/
+Doxyfile
