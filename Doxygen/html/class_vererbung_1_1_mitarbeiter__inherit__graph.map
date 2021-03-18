@@ -1,5 +1,0 @@
-<map id="Vererbung.Mitarbeiter" name="Vererbung.Mitarbeiter">
-<area shape="rect" id="node1" title="Die Basisklasse für einen Mitarbeiter" alt="" coords="92,5,239,127"/>
-<area shape="rect" id="node2" href="$class_vererbung_1_1_angestellter.html" title="Stellt einen Angestellten da" alt="" coords="5,182,160,289"/>
-<area shape="rect" id="node3" href="$class_vererbung_1_1_arbeiter.html" title="Stellt einen Arbeiter da" alt="" coords="184,175,315,296"/>
-</map>
