@@ -364,4 +364,3 @@ FodyWeavers.xsd
 
 # Doxygen dateien ignorieren
 Doxygen/
-Doxyfile
