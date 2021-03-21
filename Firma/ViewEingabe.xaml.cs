@@ -16,14 +16,14 @@
     using System.Windows.Shapes;
 
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für ViewEingabe.xaml
     /// </summary>
-    public partial class MainWindow : Window, IObserver
+    public partial class ViewEingabe : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
         /// </summary>
-        private static MainWindow singleton = null;
+        private static ViewEingabe singleton = null;
 
         /// <summary>
         /// Eine Referenz auf die Firma
@@ -31,10 +31,10 @@
         private FirmaSubject firma = null;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der MainWindow Klasse
+        /// Initialisiert eine neue Instanz der ViewEingabe Klasse
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
-        private MainWindow(FirmaSubject firma)
+        private ViewEingabe(FirmaSubject firma)
         {
             this.InitializeComponent();
 
@@ -46,11 +46,11 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        public static MainWindow GetWindow(FirmaSubject firma)
+        public static ViewEingabe GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
-                singleton = new MainWindow(firma);
+                singleton = new ViewEingabe(firma);
             }
 
             return singleton;

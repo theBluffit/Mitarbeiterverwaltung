@@ -17,7 +17,7 @@
         /// <param name="firma">Das Subjekt</param>
         public static void ErzeugeObserver(FirmaSubject firma)
         {
-            MainWindow formEingabe = MainWindow.GetWindow(firma);
+            ViewEingabe formEingabe = ViewEingabe.GetWindow(firma);
             ViewStatistik formStatistik = ViewStatistik.GetWindow(firma);
             FormMitarbeiter formMitarbeiter = FormMitarbeiter.GetWindow(firma);
             FensterMinMax formMinMax = FensterMinMax.GetWindow(firma);
