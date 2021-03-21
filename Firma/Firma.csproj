@@ -73,11 +73,11 @@
     <Compile Include="Erzeuger.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="Subject.cs" />
-    <Page Include="ViewMinMax.xaml">
+    <Page Include="Views\ViewMinMax.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewEingabe.xaml">
+    <Page Include="Views\ViewEingabe.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -87,28 +87,28 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Arbeiter.cs" />
-    <Compile Include="ViewMinMax.xaml.cs">
+    <Compile Include="Views\ViewMinMax.xaml.cs">
       <DependentUpon>ViewMinMax.xaml</DependentUpon>
     </Compile>
     <Compile Include="FirmaSubject.cs" />
-    <Compile Include="ViewEingabe.xaml.cs">
+    <Compile Include="Views\ViewEingabe.xaml.cs">
       <DependentUpon>ViewEingabe.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ViewMitarbeiter.xaml">
+    <Page Include="Views\ViewMitarbeiter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewStatistik.xaml">
+    <Page Include="Views\ViewStatistik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewMitarbeiter.xaml.cs">
+    <Compile Include="Views\ViewMitarbeiter.xaml.cs">
       <DependentUpon>ViewMitarbeiter.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewStatistik.xaml.cs">
+    <Compile Include="Views\ViewStatistik.xaml.cs">
       <DependentUpon>ViewStatistik.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mitarbeiter.cs" />

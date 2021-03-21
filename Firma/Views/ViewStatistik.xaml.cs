@@ -1,4 +1,4 @@
-﻿namespace Mitarbeiterverwaltung
+﻿namespace Mitarbeiterverwaltung.Views
 {
     using System;
     using System.Collections.Generic;
@@ -15,14 +15,14 @@
     using System.Windows.Shapes;
 
     /// <summary>
-    /// Interaktionslogik für ViewMitarbeiter.xaml
+    /// Interaktionslogik für ViewStatistik.xaml
     /// </summary>
-    public partial class ViewMitarbeiter : Window, IObserver
+    public partial class ViewStatistik : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
         /// </summary>
-        private static ViewMitarbeiter singleton = null;
+        private static ViewStatistik singleton = null;
 
         /// <summary>
         /// Eine Referenz auf die Firma
@@ -30,10 +30,10 @@
         private FirmaSubject firma = null;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der ViewMitarbeiter Klasse
+        /// Initialisiert eine neue Instanz der ViewStatistik Klasse
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
-        private ViewMitarbeiter(FirmaSubject firma)
+        private ViewStatistik(FirmaSubject firma)
         {
             this.InitializeComponent();
 
@@ -46,26 +46,31 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        public static ViewMitarbeiter GetWindow(FirmaSubject firma)
+        public static ViewStatistik GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
-                singleton = new ViewMitarbeiter(firma);
+                singleton = new ViewStatistik(firma);
             }
 
             return singleton;
         }
 
         /// <summary>
-        /// Aktuallisiert das Fenster
+        /// Aktuallisert das Fenster
         /// </summary>
         public void Update()
         {
-            this.lstDetails.Items.Clear();
+            float gesamtGehalt = 0.0f;
 
             foreach (Mitarbeiter mitarbeiter in this.firma.ListMitarbeiter)
             {
-                this.lstDetails.Items.Add(mitarbeiter.GetDetails());
+                gesamtGehalt += mitarbeiter.GetBrutto();
+            }
+
+            if (gesamtGehalt != 0.0f)
+            {
+                this.tbxTotal.Text = Math.Round(gesamtGehalt / this.firma.ListMitarbeiter.Count, 2).ToString("0.00") + "€";
             }
         }
     }

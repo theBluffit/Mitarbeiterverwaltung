@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using Mitarbeiterverwaltung.Views;
 
     /// <summary>
     /// Stellt eine Methode zum erstellen aller Beobachter bereit

@@ -1,4 +1,4 @@
-﻿namespace Mitarbeiterverwaltung
+﻿namespace Mitarbeiterverwaltung.Views
 {
     using System;
     using System.Collections.Generic;
