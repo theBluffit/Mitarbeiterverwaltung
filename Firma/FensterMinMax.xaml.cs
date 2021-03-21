@@ -1,4 +1,4 @@
-﻿namespace Vererbung
+﻿namespace Mitarbeiterverwaltung
 {
     using System;
     using System.Collections.Generic;

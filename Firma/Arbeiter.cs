@@ -1,4 +1,4 @@
-﻿namespace Vererbung
+﻿namespace Mitarbeiterverwaltung
 {
     /// <summary>
     /// Stellt einen Arbeiter da
