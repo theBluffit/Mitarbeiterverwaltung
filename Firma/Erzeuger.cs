@@ -18,7 +18,7 @@
         public static void ErzeugeObserver(FirmaSubject firma)
         {
             MainWindow formEingabe = MainWindow.GetWindow(firma);
-            FormStatistik formStatistik = FormStatistik.GetWindow(firma);
+            ViewStatistik formStatistik = ViewStatistik.GetWindow(firma);
             FormMitarbeiter formMitarbeiter = FormMitarbeiter.GetWindow(firma);
             FensterMinMax formMinMax = FensterMinMax.GetWindow(firma);
 

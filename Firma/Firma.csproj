@@ -99,7 +99,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FormStatistik.xaml">
+    <Page Include="ViewStatistik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,8 +108,8 @@
     <Compile Include="FormMitarbeiter.xaml.cs">
       <DependentUpon>FormMitarbeiter.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormStatistik.xaml.cs">
-      <DependentUpon>FormStatistik.xaml</DependentUpon>
+    <Compile Include="ViewStatistik.xaml.cs">
+      <DependentUpon>ViewStatistik.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mitarbeiter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

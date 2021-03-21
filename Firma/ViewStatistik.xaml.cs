@@ -15,14 +15,14 @@
     using System.Windows.Shapes;
 
     /// <summary>
-    /// Interaktionslogik für FormStatistik.xaml
+    /// Interaktionslogik für ViewStatistik.xaml
     /// </summary>
-    public partial class FormStatistik : Window, IObserver
+    public partial class ViewStatistik : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
         /// </summary>
-        private static FormStatistik singleton = null;
+        private static ViewStatistik singleton = null;
 
         /// <summary>
         /// Eine Referenz auf die Firma
@@ -30,10 +30,10 @@
         private FirmaSubject firma = null;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der FormStatistik Klasse
+        /// Initialisiert eine neue Instanz der ViewStatistik Klasse
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
-        private FormStatistik(FirmaSubject firma)
+        private ViewStatistik(FirmaSubject firma)
         {
             this.InitializeComponent();
 
@@ -46,11 +46,11 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        public static FormStatistik GetWindow(FirmaSubject firma)
+        public static ViewStatistik GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
-                singleton = new FormStatistik(firma);
+                singleton = new ViewStatistik(firma);
             }
 
             return singleton;
