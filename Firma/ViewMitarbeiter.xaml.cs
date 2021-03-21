@@ -15,14 +15,14 @@
     using System.Windows.Shapes;
 
     /// <summary>
-    /// Interaktionslogik für FormMitarbeiter.xaml
+    /// Interaktionslogik für ViewMitarbeiter.xaml
     /// </summary>
-    public partial class FormMitarbeiter : Window, IObserver
+    public partial class ViewMitarbeiter : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
         /// </summary>
-        private static FormMitarbeiter singleton = null;
+        private static ViewMitarbeiter singleton = null;
 
         /// <summary>
         /// Eine Referenz auf die Firma
@@ -30,10 +30,10 @@
         private FirmaSubject firma = null;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der FormMitarbeiter Klasse
+        /// Initialisiert eine neue Instanz der ViewMitarbeiter Klasse
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
-        private FormMitarbeiter(FirmaSubject firma)
+        private ViewMitarbeiter(FirmaSubject firma)
         {
             this.InitializeComponent();
 
@@ -46,11 +46,11 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        public static FormMitarbeiter GetWindow(FirmaSubject firma)
+        public static ViewMitarbeiter GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
-                singleton = new FormMitarbeiter(firma);
+                singleton = new ViewMitarbeiter(firma);
             }
 
             return singleton;

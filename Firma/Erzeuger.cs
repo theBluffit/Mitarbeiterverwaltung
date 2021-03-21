@@ -19,7 +19,7 @@
         {
             ViewEingabe formEingabe = ViewEingabe.GetWindow(firma);
             ViewStatistik formStatistik = ViewStatistik.GetWindow(firma);
-            FormMitarbeiter formMitarbeiter = FormMitarbeiter.GetWindow(firma);
+            ViewMitarbeiter formMitarbeiter = ViewMitarbeiter.GetWindow(firma);
             FensterMinMax formMinMax = FensterMinMax.GetWindow(firma);
 
             firma.Attatch(formEingabe);

@@ -95,7 +95,7 @@
       <DependentUpon>ViewEingabe.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="FormMitarbeiter.xaml">
+    <Page Include="ViewMitarbeiter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,8 +105,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMitarbeiter.xaml.cs">
-      <DependentUpon>FormMitarbeiter.xaml</DependentUpon>
+    <Compile Include="ViewMitarbeiter.xaml.cs">
+      <DependentUpon>ViewMitarbeiter.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewStatistik.xaml.cs">
       <DependentUpon>ViewStatistik.xaml</DependentUpon>
