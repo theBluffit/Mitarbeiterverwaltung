@@ -15,14 +15,14 @@
     using System.Windows.Shapes;
 
     /// <summary>
-    /// Interaktionslogik für FensterMinMax.xaml
+    /// Interaktionslogik für ViewMinMax.xaml
     /// </summary>
-    public partial class FensterMinMax : Window, IObserver
+    public partial class ViewMinMax : Window, IObserver
     {
         /// <summary>
         /// Das Singleton Objekt
         /// </summary>
-        private static FensterMinMax singleton = null;
+        private static ViewMinMax singleton = null;
 
         /// <summary>
         /// Eine Referenz auf die Firma
@@ -30,10 +30,10 @@
         private FirmaSubject firma = null;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der FensterMinMax Klasse
+        /// Initialisiert eine neue Instanz der ViewMinMax Klasse
         /// </summary>
         /// <param name="firma">Eine Referenz auf die Firma</param>
-        private FensterMinMax(FirmaSubject firma)
+        private ViewMinMax(FirmaSubject firma)
         {
             this.InitializeComponent();
 
@@ -46,11 +46,11 @@
         /// </summary>
         /// <param name="firma">Referenz auf die Firma</param>
         /// <returns>Die Singleton Instanz</returns>
-        public static FensterMinMax GetWindow(FirmaSubject firma)
+        public static ViewMinMax GetWindow(FirmaSubject firma)
         {
             if (singleton == null)
             {
-                singleton = new FensterMinMax(firma);
+                singleton = new ViewMinMax(firma);
             }
 
             return singleton;
