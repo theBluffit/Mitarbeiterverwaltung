@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mitarbeiterverwaltung"
         mc:Ignorable="d"
-        Title="ViewMinMax" Height="201.292" Width="350.895" ResizeMode="NoResize">
+        Title="MinMax" Height="201.292" Width="350.895" ResizeMode="NoResize">
     <Grid>
         <ListBox x:Name="lstDetailsBest" HorizontalAlignment="Left" Height="24" Margin="10,40,0,0" VerticalAlignment="Top" Width="317"/>
         <Label Content="Meistverdienender Mitarbeiter:" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top"/>
