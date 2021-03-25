@@ -23,10 +23,10 @@
             ViewMitarbeiter formMitarbeiter = ViewMitarbeiter.GetWindow(firma);
             ViewMinMax formMinMax = ViewMinMax.GetWindow(firma);
 
-            firma.Attatch(formEingabe);
-            firma.Attatch(formStatistik);
-            firma.Attatch(formMitarbeiter);
-            firma.Attatch(formMinMax);
+            firma.Attach(formEingabe);
+            firma.Attach(formStatistik);
+            firma.Attach(formMitarbeiter);
+            firma.Attach(formMinMax);
 
             formEingabe.Show();
             formStatistik.Show();

@@ -20,7 +20,7 @@
         /// Fügt dem Subjekt einen Beobachter hinzu
         /// </summary>
         /// <param name="observer">Der Beobachter</param>
-        public void Attatch(IObserver observer)
+        public void Attach(IObserver observer)
         {
             this.observers.Add(observer);
         }
@@ -29,7 +29,7 @@
         /// Entfernt einen Beobachter vom Subjekt
         /// </summary>
         /// <param name="observer">Der Beobachter</param>
-        public void Detatch(IObserver observer)
+        public void Detach(IObserver observer)
         {
             this.observers.Remove(observer);
         }
